@@ -13,7 +13,6 @@ const Background = styled.div`
 `
 
 const MainWrapper = styled.main`
-  background: #161616;
   min-height: 55vh;
   padding: 1rem 5rem;
 `

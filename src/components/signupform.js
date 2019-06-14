@@ -22,7 +22,30 @@ const FormHeader = styled.h2`
 `
 
 const FormFields = styled.form`
+  background: #ffffe5;
+  border-radius: 46px;
   display: flex;
+  height: 3rem;
+  padding: 0.1rem 0.1rem 0.1rem 1rem;
+  width: 35rem;
+`
+
+const EmailInput = styled.input`
+  background: none;
+  border: none;
+  color: #969801;
+  flex-grow: 1;
+  font-size: 1.25rem;
+`
+
+const SubmitInput = styled.input`
+  background: #323300;
+  border: none;
+  border-radius: 36px;
+  color: #ffffe5;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 0.25rem;
 `
 
 export default class SignupForm extends React.Component {
@@ -65,14 +88,14 @@ export default class SignupForm extends React.Component {
         <FormHeader>Send me voice news</FormHeader>
         <div>
           <FormFields onSubmit={this._handleSubmit}>
-            <input
+            <EmailInput
               type="email"
               onChange={this._handleChange}
               placeholder="Enter your e-mail here"
               name="email"
             />
             <br />
-            <input type="submit" value="Sign me up!" />
+            <SubmitInput type="submit" value="Sign me up!" />
           </FormFields>
         </div>
       </FormWrapper>

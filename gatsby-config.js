@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#161616`,
         theme_color: `#161616`,
         display: `standalone`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/voiceworks-logo.svg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-offline`,
