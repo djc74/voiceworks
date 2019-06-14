@@ -10,7 +10,7 @@ const FormWrapper = styled.section`
   border-radius: 93px;
   display: flex;
   flex-direction: column;
-  max-width: 42rem;
+  width: 60vw;
   margin: 0 auto;
   min-height: 9rem;
   padding: 1rem 1rem;
@@ -18,7 +18,7 @@ const FormWrapper = styled.section`
 
 const FormHeader = styled.h2`
   font-weight: 900;
-  font-size: 63px;
+  font-size: 4.4vw;
   text-transform: uppercase;
   color: #323300;
 `
@@ -28,7 +28,10 @@ const FormFields = styled.form`
   border-radius: 46px;
   display: flex;
   padding: 0.35rem 0.35rem 0.35rem 1rem;
-  width: 35rem;
+  width: 50vw;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `
 
 const EmailInput = styled.input`
@@ -46,6 +49,9 @@ const SubmitWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0.25rem 0.5rem;
+  max-width: 70%;
+  @media (max-width: 1000px) {
+  }
 `
 
 const SubmitInput = styled.input`
@@ -53,7 +59,7 @@ const SubmitInput = styled.input`
   border: none;
   color: #ffffe5;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 2vw;
 `
 
 export default class SignupForm extends React.Component {
