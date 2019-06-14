@@ -2,6 +2,8 @@ import React from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 import styled from "styled-components"
 
+import smiley from "../icons/smiley.svg"
+
 const FormWrapper = styled.section`
   align-items: center;
   background: #f6fb0f;
@@ -25,8 +27,7 @@ const FormFields = styled.form`
   background: #ffffe5;
   border-radius: 46px;
   display: flex;
-  height: 3rem;
-  padding: 0.1rem 0.1rem 0.1rem 1rem;
+  padding: 0.35rem 0.35rem 0.35rem 1rem;
   width: 35rem;
 `
 
@@ -38,14 +39,21 @@ const EmailInput = styled.input`
   font-size: 1.25rem;
 `
 
+const SubmitWrapper = styled.div`
+  background: #323300;
+  border-radius: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.25rem 0.5rem;
+`
+
 const SubmitInput = styled.input`
   background: #323300;
   border: none;
-  border-radius: 36px;
   color: #ffffe5;
   font-weight: 500;
   font-size: 1.5rem;
-  margin: 0.25rem;
 `
 
 export default class SignupForm extends React.Component {
@@ -94,8 +102,10 @@ export default class SignupForm extends React.Component {
               placeholder="Enter your e-mail here"
               name="email"
             />
-            <br />
-            <SubmitInput type="submit" value="Sign me up!" />
+            <SubmitWrapper>
+              <img src={smiley} alt="smiley face" />
+              <SubmitInput type="submit" value="Sign me up!" />
+            </SubmitWrapper>
           </FormFields>
         </div>
       </FormWrapper>
