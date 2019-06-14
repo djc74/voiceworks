@@ -1,34 +1,32 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from "styled-components"
+import logo from "../images/voiceworks-logo.svg"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const HeaderHolder = styled.header`
+  align-items: flex-start;
+  display: flex;
+  color: #fefefe;
+  justify-content: space-between;
+`
+
+const LogoHolder = styled.img`
+  width: 15vw;
+`
+
+const Blurb = styled.h1`
+  font-size: 4vw;
+  font-style: italic;
+  font-weight: 300;
+  padding-right: 5rem;
+  padding-top: 1rem;
+`
+
+const Header = () => (
+  <HeaderHolder>
+    <LogoHolder src={logo} alt="Voice Works logo" />
+    <Blurb>for all the latest in voice tech</Blurb>
+  </HeaderHolder>
 )
 
 Header.propTypes = {

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Voiceworks`,
+    title: `Voice Works`,
     description: `All the latest in voice technology news`,
     author: `Big Tent`,
   },

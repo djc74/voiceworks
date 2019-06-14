@@ -8,12 +8,13 @@ import Footer from "./footer"
 import "./layout.css"
 
 const Background = styled.div`
-  background: #fefefe;
+  background: #161616;
   min-height: 100vh;
 `
 
 const MainWrapper = styled.main`
-  min-height: 70vh;
+  background: #161616;
+  min-height: 55vh;
   padding: 1rem 5rem;
 `
 

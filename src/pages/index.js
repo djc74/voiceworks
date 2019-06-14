@@ -1,18 +1,19 @@
 import React from "react"
-import { Link } from "gatsby"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SignUpForm from "../components/signupform"
 import SEO from "../components/seo"
 
+const Heading = styled.h1`
+  color: #fefefe;
+`
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <Heading>Hi people</Heading>
     <SignUpForm />
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
 
