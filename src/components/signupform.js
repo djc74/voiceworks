@@ -1,7 +1,4 @@
 import React from "react"
-import Link from "gatsby-link"
-
-import Layout from "../components/layout"
 
 import addToMailchimp from "gatsby-plugin-mailchimp"
 
@@ -41,8 +38,7 @@ export default class SignupForm extends React.Component {
 
   render() {
     return (
-      <Layout>
-        <h1>Hi people</h1>
+      <>
         <p>Submit the form below and check your browser console!</p>
         <div>
           <form onSubmit={this._handleSubmit}>
@@ -56,8 +52,7 @@ export default class SignupForm extends React.Component {
             <input type="submit" />
           </form>
         </div>
-        <Link to="/">Homepage</Link>
-      </Layout>
+      </>
     )
   }
 }
