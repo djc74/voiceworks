@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const FooterWrapper = styled.footer`
-  color: hsla(0, 9%, 90%, 0.3);
+  color: hsla(0, 9%, 100%, 0.25);
   display: flex;
   justify-content: space-between;
   margin-top: 5vh;
@@ -23,7 +23,7 @@ const FooterText = styled.h6`
 
 const Footer = () => (
   <FooterWrapper>
-    <FooterText>© Voiceworks {new Date().getFullYear()}</FooterText>
+    <FooterText>© Voice Works {new Date().getFullYear()}</FooterText>
     <FooterText>
       Built with &hearts; in
       <a href="https://www.instagram.com/rochesterdaily/?hl=en">
