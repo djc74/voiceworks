@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 import chevron from "../icons/chevron.svg"
 import suze from "../images/suze-no-bg.png"
+import peter from "../images/peter-no-bg.png"
 
 const BoxesHolder = styled.section`
   display: flex;
@@ -14,21 +15,23 @@ const BoxWrapper = styled.article`
   background: #f72f97;
   color: #fffafd;
   padding: 2%;
-  /* width: 40%; */
+  position: relative;
 `
 
 const Name = styled.h1`
   font-size: 5vw;
   font-weight: 100;
-  margin-bottom: 1rem;
+  margin-bottom: 5%;
   max-width: 60%;
 `
 
 const AboutWrapper = styled.div`
+  align-items: center;
   display: flex;
 `
 
 const AboutMe = styled.p`
+  font-size: 1.5vw;
   font-weight: 700;
   margin-left: 0.5rem;
 `
@@ -39,10 +42,12 @@ const AboutChevron = styled.img`
 `
 
 const Headshot = styled.img`
-  height: 5rem;
-  position: relative;
-  top: 0;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
   right: 0;
+  top: 0;
+  max-width: 50%;
 `
 
 const NameBoxes = () => (
@@ -61,6 +66,7 @@ const NameBoxes = () => (
         <AboutChevron src={chevron} alt="chevron" />
         <AboutMe>ABOUT ME</AboutMe>
       </AboutWrapper>
+      <Headshot src={peter} alt="peter headshot" />
     </BoxWrapper>
   </BoxesHolder>
 )
