@@ -5,7 +5,7 @@ const FooterWrapper = styled.footer`
   color: hsla(0, 9%, 100%, 0.25);
   display: flex;
   justify-content: space-between;
-  margin-top: 5vh;
+  margin-top: 10vh;
   padding: 1rem 6vw;
   a {
     color: inherit;

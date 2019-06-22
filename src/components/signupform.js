@@ -10,11 +10,11 @@ const FormWrapper = styled.section`
   border-radius: 120px;
   display: flex;
   flex-direction: column;
-  /* width: 60vw; */
   margin: 0 auto;
   min-height: 9rem;
   padding: 1rem 1rem;
   @media (max-width: 600px) {
+    border-radius: 0;
   }
 `
 

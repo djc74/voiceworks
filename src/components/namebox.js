@@ -11,22 +11,31 @@ const BoxesHolder = styled.section`
   padding: 5vh 0 10vh;
   @media (max-width: 600px) {
     flex-direction: column;
+    align-items: center;
   }
 `
 
 const BoxWrapper = styled.article`
   background: #f72f97;
   color: #fffafd;
-  /* margin: 4vh 1.5vw 10vh; */
+  min-width: 48%;
   padding: 2%;
   position: relative;
-  min-width: 48%;
+  @media (max-width: 600px) {
+    min-width: 50vw;
+    :first-of-type {
+      margin-bottom: 5vh;
+    }
+  }
 `
 
 const Name = styled.h1`
   font-size: 5vw;
   font-weight: 100;
   margin-bottom: 5%;
+  @media (max-width: 600px) {
+    font-size: 8vw;
+  }
 `
 
 const RightName = styled(Name)`
@@ -46,6 +55,9 @@ const AboutMe = styled.p`
   font-size: 1.5vw;
   font-weight: 700;
   margin-left: 0.5rem;
+  @media (max-width: 600px) {
+    font-size: 3vw;
+  }
 `
 
 const AboutChevron = styled.img`
