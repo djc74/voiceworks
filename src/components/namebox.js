@@ -7,16 +7,20 @@ import peter from "../images/peter-no-bg.png"
 
 const BoxesHolder = styled.section`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 5vh 0 10vh;
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `
 
 const BoxWrapper = styled.article`
   background: #f72f97;
   color: #fffafd;
-  margin: 4vh 1.5vw 10vh;
+  /* margin: 4vh 1.5vw 10vh; */
   padding: 2%;
   position: relative;
-  min-width: 40%;
+  min-width: 48%;
 `
 
 const Name = styled.h1`

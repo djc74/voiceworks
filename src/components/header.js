@@ -12,13 +12,16 @@ const HeaderHolder = styled.header`
 
 const LogoHolder = styled.img`
   width: 15vw;
+  @media (max-width: 600px) {
+    width: 20vw;
+  }
 `
 
 const Blurb = styled.h1`
   font-size: 4vw;
   font-style: italic;
   font-weight: 300;
-  padding-right: 5rem;
+  padding-right: 6vw;
   padding-top: 1rem;
 `
 

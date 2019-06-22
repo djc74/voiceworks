@@ -6,7 +6,7 @@ const FooterWrapper = styled.footer`
   display: flex;
   justify-content: space-between;
   margin-top: 5vh;
-  padding: 1rem 5rem;
+  padding: 1rem 6vw;
   a {
     color: inherit;
     font-weight: 800;
