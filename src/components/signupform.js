@@ -24,8 +24,8 @@ const FormHeader = styled.h2`
   font-size: 4.4vw;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
-  @media (max-width: 1000px) {
-    font-size: 3.8vw;
+  @media (max-width: 600px) {
+    font-size: 4.8vw;
   }
 `
 
@@ -137,8 +137,7 @@ export default class SignupForm extends React.Component {
           </FormFields>
         </div>
         <Message>
-          You'll get a short weekly roundup of the latest news. Nothing else.
-          Ever.
+          You'll get a short weekly roundup of the latest news. No spam.
         </Message>
       </FormWrapper>
     )

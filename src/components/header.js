@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import logo from "../images/voiceworks-logo.svg"
+import logo from "../icons/voiceworks-logo.svg"
 
 const HeaderHolder = styled.header`
   align-items: flex-start;
