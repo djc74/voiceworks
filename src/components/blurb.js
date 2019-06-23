@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const BlurbHolder = styled.section`
   color: #fffafd;
-  font-size: 2.5vw;
+  font-size: 4.5vmin;
   font-weight: 100;
   padding-bottom: 10vh;
 `

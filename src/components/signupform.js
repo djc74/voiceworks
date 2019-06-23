@@ -48,6 +48,7 @@ const EmailInput = styled.input`
   color: #969801;
   flex-grow: 1;
   font-size: 2vw;
+  outline-color: #d7da0b;
   @media (max-width: 1000px) {
     border-bottom: 1px solid #d7da0b;
     font-size: 3vw;
@@ -72,6 +73,7 @@ const SubmitInput = styled.input`
   color: #ffffe5;
   font-weight: 500;
   font-size: 2vw;
+  outline-color: #d7da0b;
   @media (max-width: 1000px) {
     font-size: 2.5vw;
   }
