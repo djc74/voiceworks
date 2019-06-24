@@ -18,7 +18,13 @@ const FooterWrapper = styled.footer`
 `
 
 const FooterText = styled.h6`
-  font-size: 0.6rem;
+  font-size: 1vw;
+  @media (max-width: 900px) {
+    font-size: 1.5vw;
+  }
+  @media (max-width: 600px) {
+    font-size: 2.5vw;
+  }
 `
 
 const Footer = () => (

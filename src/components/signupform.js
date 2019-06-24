@@ -65,6 +65,9 @@ const SubmitWrapper = styled.div`
   justify-content: space-between;
   padding: 0.25rem 0.5rem;
   max-width: 70%;
+  @media (max-width: 600px) {
+    max-width: 100%;
+  }
 `
 
 const SubmitInput = styled.input`
@@ -137,7 +140,7 @@ export default class SignupForm extends React.Component {
           </FormFields>
         </div>
         <Message>
-          You'll get a short weekly roundup of the latest news. No spam.
+          You'll get a short weekly roundup of the latest news. Nothing else.
         </Message>
       </FormWrapper>
     )
