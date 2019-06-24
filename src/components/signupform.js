@@ -6,7 +6,7 @@ import smiley from "../icons/smiley.svg"
 
 const FormWrapper = styled.section`
   align-items: center;
-  background: #f6fb0f;
+  background: #161616;
   border-radius: 120px;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@ const FormWrapper = styled.section`
 `
 
 const FormHeader = styled.h2`
-  color: #323300;
+  color: #f6fb0f;
   font-weight: 900;
   font-size: 4.4vw;
   margin-bottom: 0.5rem;
@@ -82,7 +82,7 @@ const SubmitInput = styled.input`
   }
 `
 const Message = styled.p`
-  color: #5a5b00;
+  color: #fbfc9c;
   max-width: 50vw;
   text-align: center;
 `
