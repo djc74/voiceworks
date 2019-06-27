@@ -78,33 +78,37 @@ const LeftHeadshot = styled(Headshot)`
   left: 0;
 `
 
-const NameBoxes = () => (
-  <BoxesHolder>
-    <BoxWrapper>
-      <RightName>
-        Suze
-        <br />
-        Cooper
-      </RightName>
-      <RightAboutWrapper>
-        <AboutChevron src={chevron} alt="chevron" />
-        <AboutMe>ABOUT ME</AboutMe>
-      </RightAboutWrapper>
-      <LeftHeadshot src={suze} alt="suze headshot" />
-    </BoxWrapper>
-    <BoxWrapper>
-      <Name>
-        Peter
-        <br />
-        Stewart
-      </Name>
-      <AboutWrapper>
-        <AboutChevron src={chevron} alt="chevron" />
-        <AboutMe>ABOUT ME</AboutMe>
-      </AboutWrapper>
-      <Headshot src={peter} alt="peter headshot" />
-    </BoxWrapper>
-  </BoxesHolder>
-)
+class NameBoxes extends React.Component {
+  render() {
+    return (
+      <BoxesHolder>
+        <BoxWrapper>
+          <RightName>
+            Suze
+            <br />
+            Cooper
+          </RightName>
+          <RightAboutWrapper>
+            <AboutChevron src={chevron} alt="chevron" />
+            <AboutMe>ABOUT ME</AboutMe>
+          </RightAboutWrapper>
+          <LeftHeadshot src={suze} alt="suze headshot" />
+        </BoxWrapper>
+        <BoxWrapper>
+          <Name>
+            Peter
+            <br />
+            Stewart
+          </Name>
+          <AboutWrapper>
+            <AboutChevron src={chevron} alt="chevron" />
+            <AboutMe>ABOUT ME</AboutMe>
+          </AboutWrapper>
+          <Headshot src={peter} alt="peter headshot" />
+        </BoxWrapper>
+      </BoxesHolder>
+    )
+  }
+}
 
 export default NameBoxes

@@ -24,8 +24,8 @@ class Toggle extends React.Component {
   render() {
     return (
       <div>
-        <Blurb show={this.state.dropdownVisible} />
         <BlurbButton onClick={this.toggleDropdown} />
+        <Blurb show={this.state.dropdownVisible} />
       </div>
     )
   }
