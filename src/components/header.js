@@ -7,7 +7,6 @@ const HeaderHolder = styled.header`
   align-items: flex-start;
   display: flex;
   color: #fefefe;
-  justify-content: space-between;
 `
 
 const LogoHolder = styled.img`
@@ -21,14 +20,21 @@ const Blurb = styled.h1`
   font-size: 4vw;
   font-style: italic;
   font-weight: 300;
-  padding-right: 6vw;
+  margin: 0 auto;
   padding-top: 1rem;
+`
+
+const NewsletterTriangle = styled.div`
+  background: blue;
+  height: 200px;
+  width: 15vw;
 `
 
 const Header = () => (
   <HeaderHolder>
     <LogoHolder src={logo} alt="Voice Works logo" />
     <Blurb>for all the latest in voice tech</Blurb>
+    <NewsletterTriangle />
   </HeaderHolder>
 )
 

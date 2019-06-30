@@ -15,10 +15,17 @@ const BoxesHolder = styled.section`
   }
 `
 
+const BackgroundBox = styled.div`
+  background: linear-gradient(180deg, #f72f97 50%, #161616 100%);
+  height: ${props => (props.show ? "500px" : "200px")};
+  min-width: 48%;
+`
+
 const BoxWrapper = styled.article`
   background: #f72f97;
   color: #fffafd;
-  min-width: 48%;
+  display: flex;
+  flex-direction: column;
   padding: 2%;
   position: relative;
   @media (max-width: 600px) {
@@ -42,13 +49,17 @@ const RightName = styled(Name)`
   text-align: right;
 `
 
-const AboutWrapper = styled.div`
+const AboutWrapper = styled.button`
   align-items: center;
   display: flex;
+  border: none;
+  color: inherit;
+  padding: 0;
+  background: none;
 `
 
 const RightAboutWrapper = styled(AboutWrapper)`
-  justify-content: flex-end;
+  align-self: flex-end;
 `
 
 const AboutMe = styled.p`
@@ -79,33 +90,44 @@ const LeftHeadshot = styled(Headshot)`
 `
 
 class NameBoxes extends React.Component {
+  state = {
+    dropdownVisible: false,
+  }
+
+  toggleDropdown = () =>
+    this.setState(state => ({ dropdownVisible: !state.dropdownVisible }))
+
   render() {
     return (
       <BoxesHolder>
-        <BoxWrapper>
-          <RightName>
-            Suze
-            <br />
-            Cooper
-          </RightName>
-          <RightAboutWrapper>
-            <AboutChevron src={chevron} alt="chevron" />
-            <AboutMe>ABOUT ME</AboutMe>
-          </RightAboutWrapper>
-          <LeftHeadshot src={suze} alt="suze headshot" />
-        </BoxWrapper>
-        <BoxWrapper>
-          <Name>
-            Peter
-            <br />
-            Stewart
-          </Name>
-          <AboutWrapper>
-            <AboutChevron src={chevron} alt="chevron" />
-            <AboutMe>ABOUT ME</AboutMe>
-          </AboutWrapper>
-          <Headshot src={peter} alt="peter headshot" />
-        </BoxWrapper>
+        <BackgroundBox show={this.state.dropdownVisible}>
+          <BoxWrapper>
+            <RightName>
+              Suze
+              <br />
+              Cooper
+            </RightName>
+            <RightAboutWrapper onClick={this.toggleDropdown}>
+              <AboutChevron src={chevron} alt="chevron" />
+              <AboutMe>ABOUT ME</AboutMe>
+            </RightAboutWrapper>
+            <LeftHeadshot src={suze} alt="suze headshot" />
+          </BoxWrapper>
+        </BackgroundBox>
+        <BackgroundBox show={this.state.dropdownVisible}>
+          <BoxWrapper>
+            <Name>
+              Peter
+              <br />
+              Stewart
+            </Name>
+            <AboutWrapper onClick={this.toggleDropdown}>
+              <AboutChevron src={chevron} alt="chevron" />
+              <AboutMe>ABOUT ME</AboutMe>
+            </AboutWrapper>
+            <Headshot src={peter} alt="peter headshot" />
+          </BoxWrapper>
+        </BackgroundBox>
       </BoxesHolder>
     )
   }
