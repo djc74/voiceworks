@@ -25,9 +25,10 @@ const Blurb = styled.h1`
 `
 
 const NewsletterTriangle = styled.div`
-  background: blue;
-  height: 200px;
-  width: 15vw;
+  background: #f72f97;
+  clip-path: polygon(0 0, 100% 0, 100% 65%);
+  height: 12vw;
+  width: 12vw;
 `
 
 const Header = () => (
