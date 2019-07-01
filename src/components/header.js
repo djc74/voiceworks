@@ -2,11 +2,13 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import logo from "../icons/voiceworks-logo.svg"
+import triangle from "../icons/newsletter-triangle.svg"
 
 const HeaderHolder = styled.header`
   align-items: flex-start;
   display: flex;
   color: #fefefe;
+  justify-content: space-between;
 `
 
 const LogoHolder = styled.img`
@@ -20,22 +22,20 @@ const Blurb = styled.h1`
   font-size: 4vw;
   font-style: italic;
   font-weight: 300;
-  margin: 0 auto;
-  padding-top: 1rem;
+  margin-right: auto;
+  margin-left: 1.5rem;
+  padding-top: 1.5rem;
 `
 
-const NewsletterTriangle = styled.div`
-  background: #f72f97;
-  clip-path: polygon(0 0, 100% 0, 100% 65%);
-  height: 12vw;
-  width: 12vw;
+const NewsletterTriangle = styled.img`
+  height: 7vw;
 `
 
 const Header = () => (
   <HeaderHolder>
     <LogoHolder src={logo} alt="Voice Works logo" />
     <Blurb>for all the latest in voice tech</Blurb>
-    <NewsletterTriangle />
+    <NewsletterTriangle src={triangle} alt="newsletter sign-up link" />
   </HeaderHolder>
 )
 
