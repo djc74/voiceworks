@@ -30,7 +30,7 @@ const BoxWrapper = styled.article`
   color: #fffafd;
   display: flex;
   flex-direction: column;
-  padding: 2%;
+  padding: 4%;
   position: relative;
   @media (max-width: 600px) {
     min-width: 50vw;
