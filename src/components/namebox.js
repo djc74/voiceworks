@@ -15,10 +15,14 @@ const BoxesHolder = styled.section`
   }
 `
 
-const BackgroundBox = styled.div`
+const BackgroundBoxSuze = styled.div`
   background: linear-gradient(180deg, #f72f97 50%, #161616 100%);
   height: ${props => (props.show ? "500px" : "200px")};
   min-width: 48%;
+`
+
+const BackgroundBoxPeter = styled(BackgroundBoxSuze)`
+  height: ${props => (props.petershow ? "500px" : "200px")};
 `
 
 const BoxWrapper = styled.article`
@@ -92,15 +96,20 @@ const LeftHeadshot = styled(Headshot)`
 class NameBoxes extends React.Component {
   state = {
     dropdownVisible: false,
+    dropdownVisibleRight: false,
   }
 
   toggleDropdown = () =>
     this.setState(state => ({ dropdownVisible: !state.dropdownVisible }))
+  toggleRightDropdown = () =>
+    this.setState(state => ({
+      dropdownVisibleRight: !state.dropdownVisibleRight,
+    }))
 
   render() {
     return (
       <BoxesHolder>
-        <BackgroundBox show={this.state.dropdownVisible}>
+        <BackgroundBoxSuze show={this.state.dropdownVisible}>
           <BoxWrapper>
             <RightName>
               Suze
@@ -113,21 +122,21 @@ class NameBoxes extends React.Component {
             </RightAboutWrapper>
             <LeftHeadshot src={suze} alt="suze headshot" />
           </BoxWrapper>
-        </BackgroundBox>
-        <BackgroundBox show={this.state.dropdownVisible}>
+        </BackgroundBoxSuze>
+        <BackgroundBoxPeter petershow={this.state.dropdownVisibleRight}>
           <BoxWrapper>
             <Name>
               Peter
               <br />
               Stewart
             </Name>
-            <AboutWrapper onClick={this.toggleDropdown}>
+            <AboutWrapper onClick={this.toggleRightDropdown}>
               <AboutChevron src={chevron} alt="chevron" />
               <AboutMe>ABOUT ME</AboutMe>
             </AboutWrapper>
             <Headshot src={peter} alt="peter headshot" />
           </BoxWrapper>
-        </BackgroundBox>
+        </BackgroundBoxPeter>
       </BoxesHolder>
     )
   }
