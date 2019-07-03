@@ -19,11 +19,14 @@ const BoxesHolder = styled.section`
 
 const BackgroundBoxSuze = styled.div`
   background: linear-gradient(180deg, #f72f97 10%, #161616 70%);
-  display: ${props => (props.suzeshow ? "flex" : "none")};
+  display: flex;
+  max-height: ${props => (props.suzeshow ? "1000px" : "0")};
+  transition: all 1s ease-in-out;
 `
 
 const BackgroundBoxPeter = styled(BackgroundBoxSuze)`
-  display: ${props => (props.petershow ? "flex" : "none")};
+  max-height: ${props => (props.petershow ? "1000px" : "0")};
+  transition: all 1s ease-in-out;
 `
 
 const ExpandedBoxWrapper = styled.div`
@@ -67,6 +70,10 @@ const AboutWrapper = styled.button`
   color: inherit;
   padding: 0;
   background: none;
+  outline: none;
+  :hover {
+    cursor: pointer;
+  }
 `
 
 const RightAboutWrapper = styled(AboutWrapper)`
@@ -85,6 +92,9 @@ const AboutMe = styled.p`
 const AboutChevron = styled.img`
   height: 1rem;
   width: 1rem;
+  transform: ${props =>
+    props.suzeshow || props.petershow ? "rotate(90deg)" : "none"};
+  transition: all 1s ease-in-out;
 `
 
 const Headshot = styled.img`
@@ -103,7 +113,8 @@ const LeftHeadshot = styled(Headshot)`
 const BioHolder = styled.div`
   background: #fffafd;
   margin: 0 auto;
-  padding: 1rem;
+  /* padding: 1rem; */
+  overflow: hidden;
   width: 95%;
 `
 
@@ -112,11 +123,12 @@ const Bio = styled.p`
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   line-height: 1.25;
+  margin: 1rem;
 `
 
 const LogoWrapper = styled.div`
   display: flex;
-  margin-top: 1rem;
+  margin: 1rem;
 `
 
 const Logo = styled.img`
@@ -151,7 +163,11 @@ class NameBoxes extends React.Component {
               Cooper
             </RightName>
             <RightAboutWrapper onClick={this.toggleDropdown}>
-              <AboutChevron src={chevron} alt="chevron" />
+              <AboutChevron
+                src={chevron}
+                alt="chevron"
+                suzeshow={this.state.dropdownVisible}
+              />
               <AboutMe>ABOUT ME</AboutMe>
             </RightAboutWrapper>
             <LeftHeadshot src={suze} alt="suze headshot" />
@@ -193,7 +209,11 @@ class NameBoxes extends React.Component {
               Stewart
             </Name>
             <AboutWrapper onClick={this.toggleRightDropdown}>
-              <AboutChevron src={chevron} alt="chevron" />
+              <AboutChevron
+                src={chevron}
+                alt="chevron"
+                petershow={this.state.dropdownVisibleRight}
+              />
               <AboutMe>ABOUT ME</AboutMe>
             </AboutWrapper>
             <Headshot src={peter} alt="peter headshot" />
