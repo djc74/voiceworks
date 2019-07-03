@@ -3,9 +3,12 @@ import styled from "styled-components"
 
 const BlurbHolder = styled.section`
   color: #fffafd;
-  font-size: 4.5vmin;
+  font-size: 2.4vw;
   font-weight: 100;
-  padding-bottom: 10vh;
+  padding: 10vh 0;
+  @media (max-width: 600px) {
+    font-size: 3vw;
+  }
 `
 
 const Blurb = () => (

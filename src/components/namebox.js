@@ -10,7 +10,7 @@ import peter from "../images/peter-no-bg.png"
 const BoxesHolder = styled.section`
   display: flex;
   justify-content: space-between;
-  padding: 5vh 0 10vh;
+  padding: 10vh 0;
   @media (max-width: 600px) {
     flex-direction: column;
     align-items: center;

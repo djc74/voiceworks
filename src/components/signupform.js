@@ -6,16 +6,10 @@ import smiley from "../icons/smiley.svg"
 
 const FormWrapper = styled.section`
   align-items: center;
-  background: #161616;
-  border-radius: 120px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  min-height: 9rem;
-  padding: 1rem 1rem;
-  @media (max-width: 600px) {
-    border-radius: 0;
-  }
+  padding: 10vh 0 20vh;
 `
 
 const FormHeader = styled.h2`
@@ -35,8 +29,8 @@ const FormFields = styled.form`
   display: flex;
   margin-bottom: 0.5rem;
   padding: 0.35rem 0.35rem 0.35rem 1rem;
-  width: 50vw;
-  @media (max-width: 1000px) {
+  min-width: 70vw;
+  @media (max-width: 600px) {
     flex-direction: column;
     align-items: center;
   }
@@ -49,9 +43,12 @@ const EmailInput = styled.input`
   flex-grow: 1;
   font-size: 2vw;
   outline-color: #d7da0b;
-  @media (max-width: 1000px) {
-    border-bottom: 1px solid #d7da0b;
+  @media (max-width: 900px) {
     font-size: 3vw;
+  }
+  @media (max-width: 600px) {
+    border-bottom: 1px solid #d7da0b;
+    font-size: 4vw;
     margin: 0.5rem 0;
   }
 `
@@ -66,7 +63,7 @@ const SubmitWrapper = styled.div`
   padding: 0.25rem 0.5rem;
   max-width: 70%;
   @media (max-width: 600px) {
-    max-width: 100%;
+    width: 100%;
   }
 `
 
@@ -77,13 +74,15 @@ const SubmitInput = styled.input`
   font-weight: 500;
   font-size: 2vw;
   outline-color: #d7da0b;
-  @media (max-width: 1000px) {
+  @media (max-width: 900px) {
     font-size: 2.5vw;
+  }
+  @media (max-width: 600px) {
+    font-size: 4vw;
   }
 `
 const Message = styled.p`
   color: #fbfc9c;
-  max-width: 50vw;
   text-align: center;
 `
 
@@ -124,7 +123,7 @@ export default class SignupForm extends React.Component {
   render() {
     return (
       <FormWrapper id="signupform">
-        <FormHeader>Send me voice news</FormHeader>
+        <FormHeader>Get our newsletter</FormHeader>
         <div>
           <FormFields onSubmit={this._handleSubmit}>
             <EmailInput
