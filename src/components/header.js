@@ -27,6 +27,14 @@ const Blurb = styled.h1`
   margin-right: auto;
   margin-left: 1.5rem;
   padding-top: 1.5rem;
+  @media (max-width: 900px) {
+    margin-left: 1rem;
+    padding-top: 1rem;
+  }
+  @media (max-width: 600px) {
+    margin-left: 0.75rem;
+    padding-top: 0.75rem;
+  }
 `
 
 const NewsletterTriangle = styled.img`
@@ -35,6 +43,9 @@ const NewsletterTriangle = styled.img`
   :hover {
     cursor: pointer;
     width: 12vw;
+  }
+  @media (max-width: 900px) {
+    width: 15vw;
   }
   @media (max-width: 600px) {
     width: 20vw;

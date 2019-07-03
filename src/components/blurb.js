@@ -5,7 +5,7 @@ const BlurbHolder = styled.section`
   color: #fffafd;
   font-size: 2.4vw;
   font-weight: 100;
-  padding: 10vh 0;
+  padding: 5vh 0 10vh;
   @media (max-width: 600px) {
     font-size: 3vw;
   }
