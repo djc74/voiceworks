@@ -30,9 +30,14 @@ const Blurb = styled.h1`
 `
 
 const NewsletterTriangle = styled.img`
-  height: 7vw;
+  width: 11vw;
+  transition: all 0.5s ease-in-out;
   :hover {
     cursor: pointer;
+    width: 12vw;
+  }
+  @media (max-width: 600px) {
+    width: 20vw;
   }
 `
 
