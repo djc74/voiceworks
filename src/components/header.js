@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import logo from "../icons/voiceworks-logo.svg"
-import triangle from "../icons/newsletter-triangle.svg"
+import triangle from "../icons/newsletter-triangle-link.svg"
 
 const HeaderHolder = styled.header`
   align-items: flex-start;
