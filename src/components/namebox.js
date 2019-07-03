@@ -91,13 +91,13 @@ const Headshot = styled.img`
   height: 100%;
   object-fit: cover;
   position: absolute;
-  right: 0;
+  right: 3%;
   top: 0;
   max-width: 50%;
 `
 
 const LeftHeadshot = styled(Headshot)`
-  left: 0;
+  left: 3%;
 `
 
 const BioHolder = styled.div`
@@ -108,7 +108,10 @@ const BioHolder = styled.div`
 `
 
 const Bio = styled.p`
-  color: #161616;
+  color: #4d4d4d;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  line-height: 1.25;
 `
 
 const LogoWrapper = styled.div`
@@ -119,6 +122,9 @@ const LogoWrapper = styled.div`
 const Logo = styled.img`
   height: 2rem;
   margin-right: 1rem;
+  :hover {
+    opacity: 0.6;
+  }
 `
 
 class NameBoxes extends React.Component {
