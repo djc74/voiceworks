@@ -1,6 +1,8 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
+import { Link } from "react-scroll"
+
 import logo from "../icons/voiceworks-logo.svg"
 import triangle from "../icons/newsletter-triangle-link.svg"
 
@@ -29,13 +31,18 @@ const Blurb = styled.h1`
 
 const NewsletterTriangle = styled.img`
   height: 7vw;
+  :hover {
+    cursor: pointer;
+  }
 `
 
 const Header = () => (
   <HeaderHolder>
     <LogoHolder src={logo} alt="Voice Works logo" />
     <Blurb>for all the latest in voice tech</Blurb>
-    <NewsletterTriangle src={triangle} alt="newsletter sign-up link" />
+    <Link to="signupform" smooth="easeInOutCubic" duration={1000}>
+      <NewsletterTriangle src={triangle} alt="newsletter sign-up link" />
+    </Link>
   </HeaderHolder>
 )
 

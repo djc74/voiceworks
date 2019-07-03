@@ -123,7 +123,7 @@ export default class SignupForm extends React.Component {
 
   render() {
     return (
-      <FormWrapper>
+      <FormWrapper id="signupform">
         <FormHeader>Send me voice news</FormHeader>
         <div>
           <FormFields onSubmit={this._handleSubmit}>
