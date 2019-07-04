@@ -33,6 +33,12 @@ const ExpandedBoxWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 48%;
+  @media (max-width: 600px) {
+    width: 100%;
+    :first-of-type {
+      margin-bottom: 5vh;
+    }
+  }
 `
 
 const BoxWrapper = styled.article`
@@ -42,12 +48,6 @@ const BoxWrapper = styled.article`
   flex-direction: column;
   padding: 4%;
   position: relative;
-  @media (max-width: 600px) {
-    min-width: 50vw;
-    :first-of-type {
-      margin-bottom: 5vh;
-    }
-  }
 `
 
 const Name = styled.h1`
@@ -94,7 +94,7 @@ const AboutChevron = styled.img`
   width: 1rem;
   transform: ${props =>
     props.suzeshow || props.petershow ? "rotate(90deg)" : "none"};
-  transition: all 1s ease-in-out;
+  transition: all 0.8s ease-in-out;
 `
 
 const Headshot = styled.img`
@@ -113,7 +113,6 @@ const LeftHeadshot = styled(Headshot)`
 const BioHolder = styled.div`
   background: #fffafd;
   margin: 0 auto;
-  /* padding: 1rem; */
   overflow: hidden;
   width: 95%;
 `
@@ -121,9 +120,13 @@ const BioHolder = styled.div`
 const Bio = styled.p`
   color: #4d4d4d;
   font-family: "Raleway", sans-serif;
+  font-size: 1.4vw;
   font-weight: 500;
   line-height: 1.25;
   margin: 1rem;
+  @media (max-width: 600px) {
+    font-size: 3vw;
+  }
 `
 
 const LogoWrapper = styled.div`
