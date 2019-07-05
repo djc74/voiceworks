@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import SignUpForm from "../components/signupform"
 import NameBoxes from "../components/namebox"
 import Blurb from "../components/blurb"
+import FooterLinks from "../components/footerlinks"
 
 const IndexPage = () => (
   <Layout>
@@ -12,6 +13,7 @@ const IndexPage = () => (
     <NameBoxes />
     <Blurb />
     <SignUpForm />
+    <FooterLinks />
   </Layout>
 )
 
