@@ -29,10 +29,11 @@ const FormFields = styled.form`
   display: flex;
   margin-bottom: 0.5rem;
   padding: 0.35rem 0.35rem 0.35rem 1rem;
-  min-width: 70vw;
+  min-width: 52vw;
   @media (max-width: 600px) {
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+    min-width: 70vw;
   }
 `
 
