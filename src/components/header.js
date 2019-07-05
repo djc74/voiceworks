@@ -16,7 +16,7 @@ const HeaderHolder = styled.header`
 const LogoHolder = styled.img`
   width: 15vw;
   @media (max-width: 600px) {
-    width: 20vw;
+    width: 25vw;
   }
 `
 
@@ -48,7 +48,7 @@ const NewsletterTriangle = styled.img`
     width: 15vw;
   }
   @media (max-width: 600px) {
-    width: 20vw;
+    width: 25vw;
   }
 `
 
