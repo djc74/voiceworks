@@ -11,6 +11,7 @@ const FooterWrapper = styled.footer`
     color: inherit;
     font-weight: 800;
     text-decoration: none;
+      transition: all 1s;
     :hover {
       color: #ff8001;
     }

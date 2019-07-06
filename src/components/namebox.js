@@ -137,8 +137,11 @@ const LogoWrapper = styled.div`
 const Logo = styled.img`
   height: 2rem;
   margin-right: 1rem;
+  transition: all 1s;
   :hover {
     opacity: 0.6;
+    transform: scale(1.2);
+    transform-origin: left;
   }
 `
 
