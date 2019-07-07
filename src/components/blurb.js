@@ -4,20 +4,25 @@ import styled from "styled-components"
 import { StaticQuery, graphql } from "gatsby"
 
 const BlurbHolder = styled.section`
+  padding: 5vh 0 10vh;
+  @media (max-width: 600px) {
+    padding: 0;
+  }
+`
+
+const BlurbPar = styled.p`
   color: #fffafd;
   font-size: 2.4vw;
   font-weight: 100;
-  padding: 5vh 0 10vh;
   @media (max-width: 600px) {
     font-size: 3.5vw;
-    padding: 0;
   }
 `
 
 const Blurb = () => (
   <StaticQuery
     query={graphql`
-      query MyQuery {
+      query BlurbQuery {
         file(relativePath: { eq: "markdown/voiceworksblurb.md" }) {
           childMarkdownRemark {
             html
@@ -27,7 +32,7 @@ const Blurb = () => (
     `}
     render={data => (
       <BlurbHolder>
-        <p
+        <BlurbPar
           dangerouslySetInnerHTML={{
             __html: data.file.childMarkdownRemark.html,
           }}
