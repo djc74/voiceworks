@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
+import { StaticQuery, graphql } from "gatsby"
+
 const BlurbHolder = styled.section`
   color: #fffafd;
   font-size: 2.4vw;
@@ -13,13 +15,26 @@ const BlurbHolder = styled.section`
 `
 
 const Blurb = () => (
-  <BlurbHolder>
-    What we are and what we do Lorem ipsum dolor amet banjo ugh echo park
-    readymade tousled vaporware flexitarian pitchfork keffiyeh lyft Lorem ipsum
-    dolor amet food truck williamsburg meditation twee mumblecore affogato
-    intelligentsia chambray portland retro gochujang. Chicharrones meggings
-    tofu, art party
-  </BlurbHolder>
+  <StaticQuery
+    query={graphql`
+      query MyQuery {
+        file(relativePath: { eq: "markdown/voiceworksblurb.md" }) {
+          childMarkdownRemark {
+            html
+          }
+        }
+      }
+    `}
+    render={data => (
+      <BlurbHolder>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: data.file.childMarkdownRemark.html,
+          }}
+        />
+      </BlurbHolder>
+    )}
+  />
 )
 
 export default Blurb
