@@ -93,7 +93,7 @@ const AboutMe = styled.p`
   font-weight: 700;
   margin-left: 0.5rem;
   @media (max-width: 600px) {
-    font-size: 3vw;
+    font-size: 3.3vw;
   }
 `
 
@@ -119,17 +119,52 @@ const LeftHeadshot = styled(Headshot)`
 `
 
 class NameBoxes extends React.Component {
-  state = {
-    dropdownVisible: false,
-    dropdownVisibleRight: false,
+  constructor() {
+    super()
+    this.handleClick = this.handleClick.bind(this)
+    this.handleRightClick = this.handleRightClick.bind(this)
+    this.handleOutsideClick = this.handleOutsideClick.bind(this)
+    this.handleOutsideRightClick = this.handleOutsideRightClick.bind(this)
+    this.state = {
+      dropdownVisible: false,
+      dropdownVisibleRight: false,
+    }
   }
 
-  toggleDropdown = () =>
+  handleClick() {
+    if (!this.state.dropdownVisible) {
+      document.addEventListener("click", this.handleOutsideClick, false)
+    } else {
+      document.removeEventListener("click", this.handleOutsideClick, false)
+    }
     this.setState(state => ({ dropdownVisible: !state.dropdownVisible }))
-  toggleRightDropdown = () =>
+  }
+
+  handleOutsideClick(e) {
+    if (this.node.contains(e.target)) {
+      return
+    }
+    this.handleClick()
+  }
+
+  handleRightClick() {
+    if (!this.state.dropdownVisibleRight) {
+      document.addEventListener("click", this.handleOutsideRightClick, false)
+    } else {
+      document.removeEventListener("click", this.handleOutsideRightClick, false)
+    }
     this.setState(state => ({
       dropdownVisibleRight: !state.dropdownVisibleRight,
     }))
+  }
+
+  handleOutsideRightClick(e) {
+    if (this.node.contains(e.target)) {
+      return
+    }
+    this.handleRightClick()
+  }
+
   render() {
     return (
       <BoxesHolder>
@@ -140,7 +175,7 @@ class NameBoxes extends React.Component {
               <br />
               Cooper
             </RightName>
-            <RightAboutWrapper onClick={this.toggleDropdown}>
+            <RightAboutWrapper onClick={this.handleClick}>
               <AboutChevron
                 src={chevron}
                 alt="chevron"
@@ -150,7 +185,12 @@ class NameBoxes extends React.Component {
             </RightAboutWrapper>
             <LeftHeadshot src={suze} alt="suze headshot" />
           </BoxWrapper>
-          <BackgroundBoxSuze suzeshow={this.state.dropdownVisible}>
+          <BackgroundBoxSuze
+            suzeshow={this.state.dropdownVisible}
+            ref={node => {
+              this.node = node
+            }}
+          >
             <SuzeBio />
           </BackgroundBoxSuze>
         </ExpandedBoxWrapper>
@@ -161,7 +201,7 @@ class NameBoxes extends React.Component {
               <br />
               Stewart
             </Name>
-            <AboutWrapper onClick={this.toggleRightDropdown}>
+            <AboutWrapper onClick={this.handleRightClick}>
               <AboutChevron
                 src={chevron}
                 alt="chevron"
@@ -171,7 +211,12 @@ class NameBoxes extends React.Component {
             </AboutWrapper>
             <Headshot src={peter} alt="peter headshot" />
           </BoxWrapper>
-          <BackgroundBoxPeter petershow={this.state.dropdownVisibleRight}>
+          <BackgroundBoxPeter
+            petershow={this.state.dropdownVisibleRight}
+            ref={node => {
+              this.node = node
+            }}
+          >
             <PeterBio />
           </BackgroundBoxPeter>
         </ExpandedBoxWrapper>
