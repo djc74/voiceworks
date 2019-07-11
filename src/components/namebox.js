@@ -78,9 +78,14 @@ const AboutWrapper = styled.button`
   }
   @media (max-width: 600px) {
     border: 1px solid #fffafd;
-    border-radius: 50px;
+    box-shadow: ${props =>
+      props.suzeshow || props.petershow
+        ? "0 0 0 0 hsla(329, 90%, 10%, 0.3)"
+        : "0 7px 5px -3px hsla(329, 90%, 10%, 0.3)"};
+    /* border-radius: 50px; */
     padding: 4px;
     padding-right: 8px;
+    transition: all 1s;
   }
 `
 
@@ -175,7 +180,10 @@ class NameBoxes extends React.Component {
               <br />
               Cooper
             </RightName>
-            <RightAboutWrapper onClick={this.handleClick}>
+            <RightAboutWrapper
+              onClick={this.handleClick}
+              suzeshow={this.state.dropdownVisible}
+            >
               <AboutChevron
                 src={chevron}
                 alt="chevron"
