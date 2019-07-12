@@ -82,6 +82,7 @@ const SubmitInput = styled.input`
     font-size: 4vw;
   }
 `
+
 const Message = styled.p`
   color: #fbfc9c;
   text-align: center;
