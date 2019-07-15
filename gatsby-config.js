@@ -31,7 +31,7 @@ module.exports = {
         short_name: `Voice Works`,
         start_url: `/`,
         background_color: `#161616`,
-        theme_color: `#161616`,
+        theme_color: `#f72f97`,
         display: `standalone`,
         icon: `src/icons/voiceworks-logo.svg`,
       },

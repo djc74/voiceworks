@@ -144,8 +144,9 @@ export default class SignupForm extends React.Component {
           </FormFields>
         </div>
         <Message>
-          You'll get a short weekly roundup of the latest news from the world of
-          voice technology.
+          We'll bring the latest voice news to your inbox every week. We will
+          also let you know about events and meet-ups, and how you can get in
+          touch to discuss voice experience creation and consultancy.
         </Message>
       </FormWrapper>
     )

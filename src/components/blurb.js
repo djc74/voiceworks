@@ -14,6 +14,10 @@ const BlurbPar = styled.p`
   color: #fffafd;
   font-size: 2.4vw;
   font-weight: 100;
+  line-height: 1.25;
+  p {
+    margin-bottom: 1rem;
+  }
   @media (max-width: 600px) {
     font-size: 3.5vw;
   }
