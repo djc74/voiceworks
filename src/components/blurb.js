@@ -10,7 +10,7 @@ const BlurbHolder = styled.section`
   }
 `
 
-const BlurbPar = styled.p`
+const BlurbPar = styled.div`
   color: #fffafd;
   font-size: 2.4vw;
   font-weight: 100;

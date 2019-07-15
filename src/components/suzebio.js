@@ -11,7 +11,7 @@ const BioHolder = styled.div`
   width: 95%;
 `
 
-const BioPar = styled.p`
+const BioPar = styled.div`
   color: #4d4d4d;
   font-family: "Raleway", sans-serif;
   font-size: 1.4vw;
