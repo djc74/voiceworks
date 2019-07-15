@@ -16,7 +16,8 @@ const FormHeader = styled.h2`
   color: #f6fb0f;
   font-weight: 900;
   font-size: 4.4vw;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
   text-transform: uppercase;
   @media (max-width: 600px) {
     font-size: 4.8vw;
@@ -27,7 +28,7 @@ const FormFields = styled.form`
   background: #ffffe5;
   border-radius: 60px;
   display: flex;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
   padding: 0.35rem 0.35rem 0.35rem 1rem;
   min-width: 52vw;
   @media (max-width: 600px) {
@@ -91,6 +92,7 @@ const Message = styled.p`
 export default class SignupForm extends React.Component {
   state = {
     email: null,
+    status: null,
   }
 
   _handleChange = e => {
@@ -123,9 +125,10 @@ export default class SignupForm extends React.Component {
   }
 
   render() {
+    console.log(this.state)
     return (
       <FormWrapper id="signupform">
-        <FormHeader>Get our newsletter</FormHeader>
+        <FormHeader>Stay up to date with the Voice Works newsletter</FormHeader>
         <div>
           <FormFields onSubmit={this._handleSubmit}>
             <EmailInput
@@ -141,7 +144,8 @@ export default class SignupForm extends React.Component {
           </FormFields>
         </div>
         <Message>
-          You'll get a short weekly roundup of the latest news. Nothing else.
+          You'll get a short weekly roundup of the latest news from the world of
+          voice technology.
         </Message>
       </FormWrapper>
     )
