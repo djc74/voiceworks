@@ -20,7 +20,7 @@ const FormHeader = styled.h2`
   text-align: center;
   text-transform: uppercase;
   @media (max-width: 600px) {
-    font-size: 4.8vw;
+    font-size: 6vw;
   }
 `
 

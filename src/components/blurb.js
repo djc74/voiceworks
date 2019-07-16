@@ -19,7 +19,7 @@ const BlurbPar = styled.div`
     margin-bottom: 1rem;
   }
   @media (max-width: 600px) {
-    font-size: 3.5vw;
+    font-size: 4vw;
   }
 `
 
