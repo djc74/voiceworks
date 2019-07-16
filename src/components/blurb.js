@@ -14,7 +14,7 @@ const BlurbPar = styled.div`
   color: #fffafd;
   font-size: 2.4vw;
   font-weight: 100;
-  line-height: 1.25;
+  line-height: 1.3;
   p {
     margin-bottom: 1rem;
   }

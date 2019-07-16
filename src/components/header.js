@@ -52,10 +52,16 @@ const NewsletterTriangle = styled.img`
   }
 `
 
+const WordBreakSpan = styled.span`
+  display: inline-block;
+`
+
 const Header = () => (
   <HeaderHolder>
     <LogoHolder src={logo} alt="Voice Works logo" />
-    <Blurb>for all the latest in voice tech</Blurb>
+    <Blurb>
+      for all the latest in <WordBreakSpan>voice tech</WordBreakSpan>
+    </Blurb>
     <Link to="signupform" smooth="easeInOutCubic" duration={1000}>
       <NewsletterTriangle src={triangle} alt="newsletter sign-up link" />
     </Link>
