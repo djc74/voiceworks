@@ -11,7 +11,7 @@ const FooterWrapper = styled.footer`
     color: inherit;
     font-weight: 800;
     text-decoration: none;
-      transition: all 1s;
+    transition: all 1s;
     :hover {
       color: #ff8001;
     }
@@ -28,6 +28,7 @@ const FooterText = styled.h6`
   }
   :last-of-type {
     text-align: right;
+    font-weight: 500;
   }
 `
 
