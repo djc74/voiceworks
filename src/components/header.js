@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { Link } from "react-scroll"
 
 import logo from "../icons/voiceworks-logo.svg"
-import triangle from "../icons/newsletter-triangle-link.svg"
+import triangle from "../icons/download-triangle-link.svg"
 
 const HeaderHolder = styled.header`
   align-items: flex-start;
@@ -60,7 +60,7 @@ const Header = () => (
   <HeaderHolder>
     <LogoHolder src={logo} alt="Voice Works logo" />
     <Blurb>
-      for all the latest in <WordBreakSpan>voice tech</WordBreakSpan>
+      for all the latest <WordBreakSpan>in voice tech</WordBreakSpan>
     </Blurb>
     <Link to="signupform" smooth="easeInOutCubic" duration={1000}>
       <NewsletterTriangle src={triangle} alt="newsletter sign-up link" />
