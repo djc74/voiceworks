@@ -15,12 +15,12 @@ const FormWrapper = styled.section`
 const FormHeader = styled.h2`
   color: #f6fb0f;
   font-weight: 900;
-  font-size: 4.4vw;
+  font-size: 3.8vw;
   margin-bottom: 2rem;
   text-align: center;
   text-transform: uppercase;
   @media (max-width: 600px) {
-    font-size: 6vw;
+    font-size: 5.5vw;
   }
 `
 
@@ -128,7 +128,9 @@ export default class SignupForm extends React.Component {
     console.log(this.state)
     return (
       <FormWrapper id="signupform">
-        <FormHeader>Stay up to date with the Voice Works newsletter</FormHeader>
+        <FormHeader>
+          Download our free guide to voice tech and smart speakers
+        </FormHeader>
         <div>
           <FormFields onSubmit={this._handleSubmit}>
             <EmailInput
@@ -139,14 +141,14 @@ export default class SignupForm extends React.Component {
             />
             <SubmitWrapper>
               <img src={smiley} alt="smiley face" />
-              <SubmitInput type="submit" value="Sign me up!" />
+              <SubmitInput type="submit" value="Yes please!" />
             </SubmitWrapper>
           </FormFields>
         </div>
         <Message>
-          We'll bring the latest voice news to your inbox every week. We will
-          also let you know about events and meet-ups, and how you can get in
-          touch to discuss voice experience creation and consultancy.
+          We will stay in touch to let you know about events, meet-ups and voice
+          tech news, and how you can get in touch to discuss voice experience
+          creation and consultancy.
         </Message>
       </FormWrapper>
     )
