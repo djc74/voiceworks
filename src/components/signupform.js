@@ -129,7 +129,7 @@ export default class SignupForm extends React.Component {
     return (
       <FormWrapper id="signupform">
         <FormHeader>
-          Download our free guide to voice tech and smart speakers
+          Get our newsletter on voice tech and smart speakers
         </FormHeader>
         <div>
           <FormFields onSubmit={this._handleSubmit}>
@@ -146,8 +146,8 @@ export default class SignupForm extends React.Component {
           </FormFields>
         </div>
         <Message>
-          We will stay in touch to let you know about events, meet-ups and voice
-          tech news, and how you can get in touch to discuss voice experience
+          Every week we will let you know about voice tech news, meet-ups and
+          events, and how you can get in touch to discuss voice experience
           creation and consultancy.
         </Message>
       </FormWrapper>
