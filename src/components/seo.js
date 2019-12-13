@@ -61,11 +61,15 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: "Voice Works",
         },
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: "./icons/voiceworks-logo.svg",
         },
       ].concat(meta)}
     />
