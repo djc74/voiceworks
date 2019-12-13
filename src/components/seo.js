@@ -65,7 +65,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: "@davidcuppa",
+          content: "@bigtentsocial",
         },
         {
           name: `twitter:description`,
