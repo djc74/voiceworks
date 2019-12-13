@@ -57,7 +57,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `https://voiceworks.info/static/VoiceWorksLogo-1b34ea0b24a0f2a668dfa2a93ab041a5.png`,
+          content: `https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png`,
         },
         {
           name: `twitter:card`,
