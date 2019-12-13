@@ -57,7 +57,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `https://www.dropbox.com/s/9twj82lpcpqqy11/VoiceWorksLogo.png?dl=0&raw=1`,
+          content: `https://www.dropbox.com/s/asgzaq88zntggy7/VoiceWorksBlackBackground.png?dl=0&raw=1`,
         },
         {
           name: `twitter:card`,
@@ -65,7 +65,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: "@davidcuppa",
+          content: "@bigtentsocial",
         },
         {
           name: `twitter:description`,
