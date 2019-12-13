@@ -69,7 +69,8 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content: "./icons/voiceworks-logo.svg",
+          content:
+            "https://voiceworks.info/static/voiceworks-logo-5839cb87d7049670f7ef0fe2655f8231.svg",
         },
       ].concat(meta)}
     />
