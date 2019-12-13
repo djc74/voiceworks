@@ -61,7 +61,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:title`,
-          content: "Voice Works",
+          content: site.siteMetadata.title,
         },
         {
           name: `twitter:description`,
