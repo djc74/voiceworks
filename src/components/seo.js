@@ -65,7 +65,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content: `https://voiceworks.info/static/VoiceWorksLogo-1b34ea0b24a0f2a668dfa2a93ab041a5.png`,
+          content: `https://voiceworks.info/src/images/VoiceWorksLogo.png`,
         },
         {
           name: `twitter:creator`,
