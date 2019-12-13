@@ -9,7 +9,7 @@ import FooterLinks from "../components/footerlinks"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Hello" />
     <NameBoxes />
     <Blurb />
     <SignUpForm />
