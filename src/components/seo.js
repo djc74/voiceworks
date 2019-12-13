@@ -52,25 +52,24 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:url`,
+          content: `https://voiceworks.info`,
+        },
+        {
+          property: `og:image`,
+          content: `https://voiceworks.info/static/voiceworks-logo-5839cb87d7049670f7ef0fe2655f8231.svg`,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: site.siteMetadata.title,
+          content: "@davidcuppa",
         },
         {
           name: `twitter:description`,
           content: metaDescription,
-        },
-        {
-          name: `twitter:image`,
-          content:
-            "https://voiceworks.info/static/voiceworks-logo-5839cb87d7049670f7ef0fe2655f8231.svg",
         },
       ].concat(meta)}
     />
