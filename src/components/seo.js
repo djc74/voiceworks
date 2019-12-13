@@ -57,7 +57,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `https://voiceworks.info/static/VoiceWorksLogo-1b34ea0b24a0f2a668dfa2a93ab041a5.png`,
+          content: `https://www.dropbox.com/s/asgzaq88zntggy7/VoiceWorksBlackBackground.png?dl=0&raw=1`,
         },
         {
           name: `twitter:card`,
