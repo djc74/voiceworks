@@ -64,10 +64,6 @@ function SEO({ description, lang, meta, title }) {
           content: `summary`,
         },
         {
-          name: `twitter:image`,
-          content: `https://voiceworks.info/src/images/VoiceWorksLogo.png`,
-        },
-        {
           name: `twitter:creator`,
           content: "@davidcuppa",
         },
