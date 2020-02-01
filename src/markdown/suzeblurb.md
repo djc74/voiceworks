@@ -1,14 +1,3 @@
-SUZE COOPER has more than 15 years of journalism experience
-across print and radio. Trained by Trinity Mirror, she has
-worked in newsrooms around Kent producing front page stories and
-reading live breaking news on commercial radio station kmfm. Now
-a director of her own company Big Tent Media, she works
-alongside her husband to support small businesses in telling
-their stories online through the creation of websites and via
-social media. A self-confessed techy geek, she is fascinated by
-the possibilities of voice technology for story-telling. Suze is
-the creator of two Alexa Flash Briefings; an audible social
-calendar for content creators called Social Days and a what's on
-guide, What's On Medway - the listings you can listen to. She is
-a confident public speaker, eager to inspire and educate others
-about the possibilities of voice technology.
+SUZE COOPER is a voice content strategist with Vixen Labs, a voice consultancy working with brands and businesses on the creation of Voice experiences. With 20 years of experience in journalism, Suze merges her broadcasting skills with her Voice Tech knowledge producing news stories for the London Evening Standard. These can be heard on Google Assistant’s AI-driven news feature. She is also a freelance newsreader for Kent radio station, kmfm.
+
+Now a director of her own company Big Tent Media, she works alongside her husband creating content for small businesses with a specialist eye on audio content, from podcasts to audiograms. Suze is the creator of the Social Days Flash Briefings; an audible social calendar for content creators which can be heard daily via Alexa-enabled devices. She is a confident public speaker, eager to inspire and educate others about the possibilities of voice technology.
